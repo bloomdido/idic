@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "Simple React HTML component framework utilizing JSS",
   "main": "index.js",
-  "repository": "https://github.com/bloomdido/idic.git",
   "author": "Chris Anthes <canthes@bloomdido.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://github.com/bloomdido/idic.git",
+  "bugs": "https://github.com/bloomdido/idic.git/issues",
+  "repository": {
+    "url": "https://github.com/bloomdido/idic.git",
+    "type": "git"
+  }
 }
