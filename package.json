@@ -11,7 +11,11 @@
     "url": "https://github.com/bloomdido/idic.git",
     "type": "git"
   },
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook"
+  },
   "devDependencies": {
+    "@storybook/react": "^3.4.7",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-plugin-transform-class-properties": "^6.24.1",
