@@ -17,6 +17,7 @@
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.4.8",
     "@storybook/react": "^3.4.7",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
