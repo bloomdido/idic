@@ -1,6 +1,6 @@
 import * as React from 'react'
 import injectSheet from 'react-jss'
-import {filterCssProps, properties, styles} from 'src/jss'
+import {filterJssProps, buildJssStyles} from 'src/jss'
 
 class Box extends React.PureComponent {
   static defaultProps = {
@@ -15,7 +15,7 @@ class Box extends React.PureComponent {
       ...other,
     } = this.props
 
-    const passthrough = filterCssProps(other)
+    const passthrough = filterJssProps(other)
 
     return (
       <Component className={classes.root} {...passthrough}>
@@ -23,6 +23,10 @@ class Box extends React.PureComponent {
       </Component>
     )
   }
+}
+
+const styles = {
+  root: buildJssStyles,
 }
 
 export default injectSheet(styles)(Box)

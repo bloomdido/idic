@@ -1,6 +1,6 @@
 import cssProperties from './properties'
 
-export const filterCssProps = (props) => {
+export const filterJssProps = (props) => {
   let filtered = {}
 
   Object.entries(props).forEach(([k, v]) => {
@@ -8,4 +8,14 @@ export const filterCssProps = (props) => {
   })
 
   return filtered
+}
+
+export const buildJssStyles = (props) => {
+  let root = {}
+
+  Object.entries(props).forEach(([k, v]) => {
+    if (cssProperties.includes(k)) root[k] = v
+  })
+
+  return root
 }

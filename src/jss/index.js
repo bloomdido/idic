@@ -1,6 +1,3 @@
-export * from './properties'
-export * from './selectors'
-export {default as styles} from './styles'
 export * from './utilities'
 
 // let completeProperties = [...properties]
