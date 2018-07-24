@@ -1,15 +1,15 @@
 {
-  "name": "idic",
+  "name": "react-idic",
   "version": "1.0.0",
   "description": "Simple React HTML component framework utilizing JSS",
-  "main": "dist/idic.js",
+  "main": "dist/react-idic.js",
   "module": "src/index.js",
   "author": "Chris Anthes <canthes@bloomdido.com>",
   "license": "MIT",
-  "homepage": "https://github.com/bloomdido/idic.git",
-  "bugs": "https://github.com/bloomdido/idic.git/issues",
+  "homepage": "https://github.com/bloomdido/react-idic.git",
+  "bugs": "https://github.com/bloomdido/react-idic.git/issues",
   "repository": {
-    "url": "https://github.com/bloomdido/idic.git",
+    "url": "https://github.com/bloomdido/react-idic.git",
     "type": "git"
   },
   "scripts": {
