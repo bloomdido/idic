@@ -2,9 +2,9 @@ import * as React from 'react'
 import injectSheet from 'react-jss'
 import {filterCssProps, properties, styles} from 'src/jss'
 
-class Box extends React.PureComponent {
+class Text extends React.PureComponent {
   static defaultProps = {
-    component: 'div',
+    component: 'p',
   }
 
   render() {
@@ -25,4 +25,4 @@ class Box extends React.PureComponent {
   }
 }
 
-export default injectSheet(styles)(Box)
+export default injectSheet(styles)(Text)
