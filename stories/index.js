@@ -64,3 +64,6 @@ storiesOf('Text', module)
 .add('italic', () => (
   <Text fontStyle="italic">Hello, world!</Text>
 ))
+.add('withTopMargin', () => (
+  <Text marginTop={50}>Hello, world!</Text>
+))

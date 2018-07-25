@@ -26,12 +26,22 @@ class Text extends React.PureComponent {
 }
 
 const styles = {
-  root: props => ({
-    ...buildJssStyles(props),
+  root: props => {
+    let defaultMargin
 
-    // overrides
-    margin: props.margin || 0,
-  }),
+    const {margin, marginTop, marginLeft, marginBottom, marginRight} = props
+
+    if (!margin && !marginTop && !marginLeft && !marginBottom && !marginRight) {
+      defaultMargin = 0
+    }
+
+    return {
+      ...buildJssStyles(props),
+
+      // overrides
+      margin: props.margin || defaultMargin,
+    }
+  }
 }
 
 export default injectSheet(styles)(Text)
