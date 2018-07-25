@@ -270,6 +270,8 @@ export const properties = [
   "wordWrap",
   "writingMode",
   "zIndex",
+
+  "pointerEvents",
 ]
 
 export default properties
