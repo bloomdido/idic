@@ -32,6 +32,14 @@ storiesOf('Box', module)
     onClick={action('clicked')}
   />
 ))
+.add('hover', () => (
+  <Box
+    height={250}
+    width={250}
+    backgroundColor="red"
+    hoverBackgroundColor="green"
+  />
+))
 
 storiesOf('Button', module)
 .add('default', () => (
