@@ -1,6 +1,6 @@
 import * as React from 'react'
 import injectSheet from 'react-jss'
-import {filterJssProps, buildJssStyles} from 'src/jss'
+import {filterJssProps, rootStyles} from 'src/jss'
 
 class List extends React.PureComponent {
   static defaultProps = {
@@ -26,14 +26,7 @@ class List extends React.PureComponent {
 }
 
 const styles = {
-  root: props => ({
-    ...buildJssStyles(props),
-
-    // overrides
-    margin: props.margin || 0,
-    padding: props.padding || 0,
-    listStyle: props.listStyle || 'none',
-  }),
+  root: rootStyles,
 }
 
 export default injectSheet(styles)(List)

@@ -32,7 +32,7 @@ storiesOf('Box', module)
     onClick={action('clicked')}
   />
 ))
-.add('hovered', () => (
+.add('hover', () => (
   <Box
     height={250}
     width={250}

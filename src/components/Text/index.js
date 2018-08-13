@@ -1,6 +1,6 @@
 import * as React from 'react'
 import injectSheet from 'react-jss'
-import {filterJssProps, buildJssStyles} from 'src/jss'
+import {filterJssProps, rootStyles} from 'src/jss'
 
 class Text extends React.PureComponent {
   static defaultProps = {
@@ -26,22 +26,7 @@ class Text extends React.PureComponent {
 }
 
 const styles = {
-  root: props => {
-    let defaultMargin
-
-    const {margin, marginTop, marginLeft, marginBottom, marginRight} = props
-
-    if (!margin && !marginTop && !marginLeft && !marginBottom && !marginRight) {
-      defaultMargin = 0
-    }
-
-    return {
-      ...buildJssStyles(props),
-
-      // overrides
-      margin: props.margin || defaultMargin,
-    }
-  }
+  root: rootStyles,
 }
 
 export default injectSheet(styles)(Text)

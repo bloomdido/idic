@@ -29,55 +29,19 @@ export const filterJssProps = (props) => {
   return filtered
 }
 
-const activeKey = '&:active'
-const checkedKey = '&:checked'
-const disabledKey = '&:disabled'
-const enabledKey = '&:enabled'
-const focusKey = '&:focus'
-const hoverKey = '&:hover'
-
-export const buildJssStyles = (props) => {
-  let styles = {}
-
-  Object.entries(props).forEach(([k, v]) => {
-    if (properties.includes(k)) styles[k] = v
-
-    if (activeProperties.includes(k)) {
-      styles[activeKey] = styles[activeKey] || {}
-
-      styles[activeKey][rootProp('active', k)] = v
-    }
-
-    if (checkedProperties.includes(k)) {
-      styles[checkedKey] = styles[checkedKey] || {}
-
-      styles[checkedKey][rootProp('checked', k)] = v
-    }
-
-    if (disabledProperties.includes(k)) {
-      styles[disabledKey] = styles[disabledKey] || {}
-
-      styles[disabledKey][rootProp('disabled', k)] = v
-    }
-
-    if (enabledProperties.includes(k)) {
-      styles[enabledKey] = styles[enabledKey] || {}
-
-      styles[enabledKey][rootProp('enabled', k)] = v
-    }
-
-    if (focusProperties.includes(k)) {
-      styles[focusKey] = styles[focusKey] || {}
-
-      styles[enabledKey][rootProp('focus', k)] = v
-    }
-
-    if (hoverProperties.includes(k)) {
-      styles[hoverKey] = styles[hoverKey] || {}
-
-      styles[hoverKey][rootProp('hover', k)] = v
-    }
-  })
-
-  return styles
+export const rootStyles = {
+  '&:active': {},
+  '&:checked': {},
+  '&:disabled': {},
+  '&:enabled': {},
+  '&:focus': {},
+  '&:hover': {},
 }
+
+properties.forEach(p => rootStyles[p] = props => props[p])
+activeProperties.forEach(p => rootStyles['&:active'][rootProp('active', p)] = props => props[p])
+checkedProperties.forEach(p => rootStyles['&:checked'][rootProp('checked', p)] = props => props[p])
+disabledProperties.forEach(p => rootStyles['&:disabled'][rootProp('disabled', p)] = props => props[p])
+enabledProperties.forEach(p => rootStyles['&:enabled'][rootProp('enabled', p)] = props => props[p])
+focusProperties.forEach(p => rootStyles['&:focus'][rootProp('focus', p)] = props => props[p])
+hoverProperties.forEach(p => rootStyles['&:hover'][rootProp('hover', p)] = props => props[p])

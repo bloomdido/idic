@@ -1,6 +1,6 @@
 import * as React from 'react'
 import injectSheet from 'react-jss'
-import {filterJssProps, buildJssStyles} from 'src/jss'
+import {filterJssProps, rootStyles} from 'src/jss'
 
 class ListItem extends React.PureComponent {
   static defaultProps = {
@@ -26,9 +26,7 @@ class ListItem extends React.PureComponent {
 }
 
 const styles = {
-  root: props => ({
-    ...buildJssStyles(props),
-  }),
+  root: rootStyles,
 }
 
 export default injectSheet(styles)(ListItem)

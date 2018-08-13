@@ -1,6 +1,6 @@
 import * as React from 'react'
 import injectSheet from 'react-jss'
-import {filterJssProps, buildJssStyles} from 'src/jss'
+import {filterJssProps, rootStyles} from 'src/jss'
 
 class Image extends React.PureComponent {
   static defaultProps = {
@@ -26,7 +26,7 @@ class Image extends React.PureComponent {
 }
 
 const styles = {
-  root: buildJssStyles,
+  root: rootStyles,
 }
 
 export default injectSheet(styles)(Image)
