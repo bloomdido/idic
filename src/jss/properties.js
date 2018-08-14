@@ -272,6 +272,10 @@ export const properties = [
   "zIndex",
 
   "pointerEvents",
+
+  // for stupid Safari
+  "gridColumnGap",
+  "gridRowGap",
 ]
 
 export const selectorProperties = [
