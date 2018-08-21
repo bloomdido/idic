@@ -52,6 +52,18 @@ storiesOf('Image', module)
     src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/stsci-gallery-1022a-2000x960.jpg"
   />
 ))
+.add('filter', () => (
+  <Image
+    src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/stsci-gallery-1022a-2000x960.jpg"
+    filter="brightness(150%)"
+  />
+))
+.add('hoverFilter', () => (
+  <Image
+    src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/stsci-gallery-1022a-2000x960.jpg"
+    hoverFilter="sepia(50%)"
+  />
+))
 
 storiesOf('List', module)
 .add('default', () => (

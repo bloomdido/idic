@@ -276,6 +276,9 @@ export const properties = [
   // for stupid Safari
   "gridColumnGap",
   "gridRowGap",
+
+  // from filter effects modulw
+  "filter",
 ]
 
 export const selectorProperties = [
@@ -377,6 +380,8 @@ export const selectorProperties = [
   "zIndex",
 
   "pointerEvents",
+
+  "filter",
 ]
 
 export const prefixProp = (prefix, prop) => {
