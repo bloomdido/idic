@@ -1,6 +1,6 @@
 {
   "name": "react-idic",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Simple React HTML component framework utilizing JSS",
   "main": "dist/react-idic.js",
   "author": "Chris Anthes <canthes@bloomdido.com>",
