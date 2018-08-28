@@ -11,6 +11,7 @@ class Box extends React.PureComponent {
     const {
       classes,
       component: Component,
+      childRef,
       children,
       ...other,
     } = this.props
@@ -18,7 +19,7 @@ class Box extends React.PureComponent {
     const passthrough = filterJssProps(other)
 
     return (
-      <Component className={classes.root} {...passthrough}>
+      <Component ref={childRef} className={classes.root} {...passthrough}>
         {children}
       </Component>
     )
